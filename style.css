@@ -1,0 +1,44 @@
+/* This affects the whole page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* This styles the main heading from the <header> */
+header {
+    background-color: #004a99; /* A nice blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* This styles the main content area */
+main {
+    padding: 20px;
+}
+
+/* This styles the <h2> sub-headings */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* This targets our new button */
+button {
+    background-color: #ff6600; /* A nice orange */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Makes the mouse turn into a hand */
+}
+
+/* This adds a simple hover effect */
+button:hover {
+    background-color: #e65c00;
+}
