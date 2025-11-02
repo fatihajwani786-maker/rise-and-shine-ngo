@@ -1,0 +1,82 @@
+.contact-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.contact-page h2 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-page > p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-form-side {
+  flex: 2; /* Form side takes 2/3 of the width */
+}
+
+.contact-info-side {
+  flex: 1; /* Info side takes 1/3 of the width */
+}
+
+.contact-info-side h3 {
+  font-size: 22px;
+  color: #004a99;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.contact-info-side p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Important for padding to work right */
+}
+
+.btn-submit {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 5px;
+  overflow: hidden; /* This will make the map corners rounded */
+}

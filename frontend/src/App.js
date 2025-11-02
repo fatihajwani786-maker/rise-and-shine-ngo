@@ -1,38 +1,43 @@
-import React, { useState, useEffect } from 'react'; // Import React's tools
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+// Import main layout components
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// Import page components
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ProgramsPage from './pages/ProgramsPage'; 
+import ContactPage from './pages/ContactPage'; 
+import ProjectsPage from './pages/ProjectsPage'; 
+import MediaPage from './pages/MediaPage'; 
+import GetInvolvedPage from './pages/GetInvolvedPage'; 
+import BlogPage from './pages/BlogPage'; 
+import DonatePage from './pages/DonatePage'; //
+// We will add more pages here later (e.g., Programs, Contact)
+
 function App() {
-  // 1. Create a "state" to hold our list of posts
-  // It starts as an empty list: []
-  const [posts, setPosts] = useState([]);
-
-  // 2. This 'useEffect' hook runs once when the component loads
-  useEffect(() => {
-    // 3. We use 'fetch' to make the "phone call" to our Django API
-    fetch('http://127.0.0.1:8000/api/posts/')
-      .then(response => response.json()) // 4. Convert the response to JSON
-      .then(data => setPosts(data))      // 5. Put the JSON data into our 'posts' state
-      .catch(error => console.error('Error fetching posts:', error)); // 6. (Good practice) Log any errors
-  }, []); // The empty [] means "only run this one time"
-
-  // 7. This is what React will draw on the screen
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Rise-and-Shine NGO</h1>
-        <h2>Our Blog</h2>
-      </header>
+    <BrowserRouter>
+      <Header />
       <main>
-        {/* 8. We "map" over the list of posts and create HTML for each one */}
-        {posts.map(post => (
-          // 9. 'key' is a special React prop for lists
-          <div key={post.id} className="post-card">
-            <h3>{post.title}</h3>
-            <p>{post.content}</p>
-          </div>
-        ))}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/programs" element={<ProgramsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/media" element={<MediaPage />} />
+          <Route path="/get-involved" element={<GetInvolvedPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/donate" element={<DonatePage />} />
+          {/* Add routes for other pages here */}
+        </Routes>
       </main>
-    </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

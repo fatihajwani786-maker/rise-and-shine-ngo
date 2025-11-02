@@ -1,0 +1,114 @@
+.donate-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.donate-page h2 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.donate-page > p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.donate-form-container {
+  display: flex;
+  gap: 40px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.donate-options, .payment-form {
+  flex: 1;
+}
+
+.donate-options h3, .payment-form h3 {
+  font-size: 22px;
+  color: #004a99;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.amount-selection, .frequency-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.amount-selection input {
+  grid-column: 1 / -1; /* Make input span full width */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.amount-selection button, .frequency-selection button {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.amount-selection button.selected, .frequency-selection button.selected {
+  background: #e6f0ff; /* Light blue */
+  border-color: #004a99;
+  color: #004a99;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.card-details {
+  display: flex;
+  gap: 20px;
+}
+
+.card-details > div {
+  width: 50%;
+}
+
+.btn-submit-donation {
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.secure-note {
+  text-align: center;
+  margin-top: 15px;
+  color: #777;
+}

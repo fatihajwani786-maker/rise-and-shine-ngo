@@ -1,39 +1,6 @@
 body {
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #004a99;
-  padding: 20px;
-  color: white;
-}
-
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto; /* Center the content */
-}
-
-.post-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.post-card h3 {
-  color: #333;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
-}
-
-.post-card p {
-  color: #555;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
