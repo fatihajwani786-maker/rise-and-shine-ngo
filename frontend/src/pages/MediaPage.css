@@ -20,7 +20,7 @@
 
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -39,20 +39,28 @@
   display: block;
 }
 
-.media-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* --- NEW STYLES FOR VIDEO --- */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
 }
 
-.media-item:hover .media-caption {
-  opacity: 1;
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* --- END NEW STYLES --- */
+
+.media-caption {
+  /* This caption works for both images and videos */
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  background-color: #f9f9f9;
 }
