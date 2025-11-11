@@ -7,4 +7,4 @@ class GalleryItemListView(generics.ListAPIView):
     API view to list all gallery items, ordered by the 'order' field.
     """
     queryset = GalleryItem.objects.all()
-    serializer_class = GalleryItemSerializer
+    serializer_class = GalleryItemSerializer    

@@ -63,3 +63,9 @@
   color: #ff6600;
   font-weight: bold;
 }
+
+.project-meta {
+  font-size: 14px;
+  color: #666;
+  margin: 15px 0;
+}

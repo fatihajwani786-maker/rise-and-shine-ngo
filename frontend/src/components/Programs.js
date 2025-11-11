@@ -1,5 +1,6 @@
 import React from 'react';
-import './Programs.css'; // We will create this file next
+import './Programs.css';
+import { Link } from 'react-router-dom'; // This import is correct
 
 function Programs() {
   return (
@@ -10,19 +11,22 @@ function Programs() {
         <div className="program-card">
           <h3>Education for All</h3>
           <p>Initiatives aimed at providing quality education to underprivileged children.</p>
-          <a href="/programs/education">Learn More</a>
+          {/* --- CHANGE THIS --- */}
+          <Link to="/programs">Learn More</Link>
         </div>
 
         <div className="program-card">
           <h3>Healthcare Initiatives</h3>
           <p>Health camps, mobile health units, and other community-based health interventions.</p>
-          <a href="/programs/healthcare">Learn More</a>
+          {/* --- AND THIS --- */}
+          <Link to="/programs">Learn More</Link>
         </div>
 
         <div className="program-card">
           <h3>Livelihood Programs</h3>
           <p>Vocational training and livelihood generation programs for marginalized communities.</p>
-          <a href="/programs/livelihood">Learn More</a>
+          {/* --- AND THIS --- */}
+          <Link to="/programs">Learn More</Link>
         </div>
 
       </div>

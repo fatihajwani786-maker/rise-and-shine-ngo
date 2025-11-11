@@ -1,69 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Keep Link for "Read More"
-import './ProjectsPage.css'; // We'll re-use the same CSS file
+import React from 'react';
 
-function ProjectsPage() {
-  // Create state variables to hold projects and loading state
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+// We re-use the AboutPage.css for a simple layout
+import './AboutPage.css'; 
 
-  // Get the API URL from environment, or use local
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000';
-
-  useEffect(() => {
-    // Fetch projects when the page loads
-    async function fetchProjects() {
-      try {
-        const response = await fetch(`${apiUrl}/api/projects/`);
-        const data = await response.json();
-        setProjects(data); // Set the projects from the API
-      } catch (error) {
-        console.error('Error fetching projects:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProjects();
-  }, [apiUrl]); // Re-run if apiUrl changes
-
-  // Show a loading message
-  if (loading) {
-    return <main className="projects-page"><h2>Loading projects...</h2></main>;
-  }
-
-  // Render the dynamic content
+function ProgramsPage() {
   return (
-    <main className="projects-page">
-      <h2>Our Projects</h2>
-      <p>Showcasing our ongoing and completed projects across different sectors.</p>
-      <div className="project-grid">
+    <main className="about-page"> {/* Re-using this class is fine */}
+      <h2>Our Programs</h2>
+      
+      <section>
+        <h3>Education for All</h3>
+        <p>Initiatives aimed at providing quality education to underprivileged children. This includes setting up schools, providing scholarships, and running after-school programs.</p>
+      </section>
+      
+      <section>
+        <h3>Healthcare Initiatives</h3>
+        <p>Health camps, mobile health units, and other community-based health interventions. We focus on preventative care and maternal health.</p>
+      </section>
 
-        {/* Map over the projects from the API instead of the old array */}
-        {projects.map(project => (
-          <div className="project-card" key={project.id}>
-
-            {/* Use the image URL from the API */}
-            <img src={project.image} alt={project.title} />
-
-            <div className="project-card-content">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-
-              {/* This link is a placeholder, you can remove it if you want */}
-              <Link to={`/projects/${project.id}`}>Read More</Link>
-            </div>
-          </div>
-        ))}
-
-        {/* Show a message if no projects are found */}
-        {!loading && projects.length === 0 && (
-          <p>No projects found. Please check back later!</p>
-        )}
-
-      </div>
+      <section>
+        <h3>Livelihood Programs</h3>
+        <p>Vocational training and livelihood generation programs for marginalized communities. We empower individuals with the skills they need to earn a sustainable income.</p>
+      </section>
     </main>
   );
 }
 
-export default ProjectsPage;
+export default ProgramsPage;
